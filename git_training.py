@@ -29,7 +29,6 @@ def L1_sort(L):
     """ 第一位任務：
         將 L1 進行升序排序，排序演算法不限，唯禁止使用內建或第三方函式庫的 sort
     """
-
     return L
 
 
@@ -37,7 +36,12 @@ def L2_sort(L):
     """ 第二位任務：
         將 L2 進行升序排序，排序演算法不限，唯禁止使用內建或第三方函式庫的 sort
     """
-
+    for i in range(0,200,1):
+        for j in range(i+1,200,1):
+            if L[i]>L[j]:
+                temp = L[i]
+                L[i] = L[j]
+                L[j] = temp
     return L
 
 
@@ -60,3 +64,4 @@ def binary_tree(L):
 
 if __name__ == "__main__":
     """ main program here """
+    L2_sort(L2)
